@@ -1,0 +1,90 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1.1 (win64) Build 3900603 Fri Jun 16 19:31:24 MDT 2023
+| Date         : Wed Dec 11 11:47:21 2024
+| Host         : DESKTOP-S1G3DAF running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Snake_Game_control_sets_placed.rpt
+| Design       : Snake_Game
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    12 |
+|    Minimum number of control sets                        |    12 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    46 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    12 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     4 |
+| >= 12 to < 14      |     2 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     4 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              20 |           12 |
+| No           | No                    | Yes                    |              72 |           50 |
+| No           | Yes                   | No                     |              28 |            8 |
+| Yes          | No                    | No                     |              21 |           13 |
+| Yes          | No                    | Yes                    |              10 |            5 |
+| Yes          | Yes                   | No                     |            1235 |          509 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+-----------------------------------+-----------------------+------------------+----------------+--------------+
+|  Clock Signal  |           Enable Signal           |    Set/Reset Signal   | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+-----------------------------------+-----------------------+------------------+----------------+--------------+
+|  CLK_IBUF_BUFG | VGA_PD/head_h_pos[9]_i_1_n_0      |                       |                3 |              5 |         1.67 |
+|  CLK_IBUF_BUFG | VGA_PD/head_v_pos[9]_i_1_n_0      |                       |                4 |              6 |         1.50 |
+|  CLK_IBUF_BUFG | VGA_D/E[0]                        |                       |                6 |             10 |         1.67 |
+|  VGA_D/E[0]    |                                   | RST_IBUF              |                8 |             10 |         1.25 |
+|  VGA_D/E[0]    | VGA_D/v_count_next_1              | RST_IBUF              |                5 |             10 |         2.00 |
+|  CLK_IBUF_BUFG | VGA_PD/current_length__0          | VGA_PD/frame_counter0 |                3 |             11 |         3.67 |
+|  CLK_IBUF_BUFG | VGA_PD/apple_h_pos__0             | VGA_PD/frame_counter0 |                4 |             12 |         3.00 |
+|  CLK_IBUF_BUFG | VGA_PD/apple_h_counter[5]_i_2_n_0 | VGA_PD/frame_counter0 |                3 |             12 |         4.00 |
+|  CLK_IBUF_BUFG |                                   |                       |               12 |             20 |         1.67 |
+|  CLK_IBUF_BUFG |                                   | VGA_PD/frame_counter0 |                8 |             28 |         3.50 |
+|  CLK_IBUF_BUFG |                                   | RST_IBUF              |               42 |             62 |         1.48 |
+|  CLK_IBUF_BUFG | VGA_PD/body_v_pos[77][9]_i_1_n_0  | VGA_PD/frame_counter0 |              499 |           1200 |         2.40 |
++----------------+-----------------------------------+-----------------------+------------------+----------------+--------------+
+
+

@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.1.1 (64-bit)
+# SW Build 3900603 on Fri Jun 16 19:31:24 MDT 2023
+# IP Build 3900379 on Sat Jun 17 05:28:05 MDT 2023
+# SharedData Build 3899622 on Fri Jun 16 03:34:24 MDT 2023
+# Start of session at: Wed Dec 11 11:43:51 2024
+# Process ID: 21888
+# Current directory: C:/Users/micro/Snake_Game/Snake_Game.runs/synth_1
+# Command line: vivado.exe -log Snake_Game.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Snake_Game.tcl
+# Log file: C:/Users/micro/Snake_Game/Snake_Game.runs/synth_1/Snake_Game.vds
+# Journal file: C:/Users/micro/Snake_Game/Snake_Game.runs/synth_1\vivado.jou
+# Running On: DESKTOP-S1G3DAF, OS: Windows, CPU Frequency: 2803 MHz, CPU Physical cores: 4, Host memory: 12657 MB
+#-----------------------------------------------------------
+source Snake_Game.tcl -notrace
